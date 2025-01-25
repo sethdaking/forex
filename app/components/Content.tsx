@@ -1,147 +1,96 @@
 'use client';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 
 const Content = () => {
   return (
     <div className="space-y-16 mt-32">
       {/* Who's this for? Section */}
-      <section className="relative flex flex-col md:flex-row items-center justify-between bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
+      <section className="relative flex flex-col items-center justify-center bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
         <motion.div
-          className="w-full md:w-1/2 text-center md:text-left pr-4"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="text-center"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.8 }}
           transition={{ duration: 1, type: 'spring', stiffness: 100 }}
           whileHover={{ scale: 1.05 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="text-shadow-blue">Who&apos;s this for?</span>
           </h2>
-          <p className="text-xl text-white mt-4">
-            If you love numbers, enjoy solving puzzles, and dream of financial freedom—this course is for you!
+          <p className="text-xl text-white mb-6">
+            If you love numbers, enjoy solving puzzles, and dream of financial freedom, this course is designed for you!
           </p>
-        </motion.div>
-        <div className="border-r border-white h-full mx-4 hidden md:block"></div>
-        <motion.div
-          className="w-full md:w-1/2 relative"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.8 }}
-          transition={{ duration: 1, type: 'spring', stiffness: 100 }}
-        >
-          <Image
-            className="w-full h-auto rounded-lg shadow-lg"
-            src="/img.jpg" // Replace with your image
-            alt="Who's this for?"
-            width={400}
-            height={300}
-          />
+          <p className="text-lg text-white">
+            Whether you&apos;re a complete beginner or looking to level up your trading skills, our comprehensive modules will guide you every step of the way.
+          </p>
         </motion.div>
       </section>
 
       {/* Course Curriculum Section */}
-      <section className="relative flex flex-col md:flex-row items-center justify-between bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
+      <section className="relative flex flex-col items-center justify-center bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
         <motion.div
-          className="w-full md:w-1/2 text-center md:text-left pr-4"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="text-center"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.8 }}
           transition={{ duration: 1, type: 'spring', stiffness: 100 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="text-shadow-blue">Course Curriculum</span>
           </h2>
-          <ul className="list-inside list-disc text-xl text-white mt-4">
+          <p className="text-xl text-white mb-6">
+            Our course is packed with practical insights and techniques, carefully crafted to give you a deep understanding of the Forex market. Here&apos;s what you&apos;ll learn:
+          </p>
+          <ul className="list-inside list-disc text-xl text-white space-y-4">
             <li>Module 1: Introduction to Forex</li>
             <li>Module 2: Advanced Trading Strategies</li>
-            <li>Module 3: Risk Management & Psychology</li>
-            <li>Module 4: Real-World Case Studies</li>
+            <li>Module 3: Risk Management & Trading Psychology</li>
+            <li>Module 4: Real-World Case Studies and Applications</li>
           </ul>
-        </motion.div>
-        <div className="border-r border-white h-full mx-4 hidden md:block"></div>
-        <motion.div
-          className="w-full md:w-1/2 relative"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.8 }}
-          transition={{ duration: 1, type: 'spring', stiffness: 100 }}
-        >
-          <Image
-            className="w-full h-auto rounded-lg shadow-lg"
-            src="/img.jpg" // Replace with your image
-            alt="Course Curriculum"
-            width={400}
-            height={300}
-          />
         </motion.div>
       </section>
 
       {/* Duration + Format Section */}
-      <section className="relative flex flex-col md:flex-row items-center justify-between bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
+      <section className="relative flex flex-col items-center justify-center bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
         <motion.div
-          className="w-full md:w-1/2 text-center md:text-left pr-4"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="text-center"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.8 }}
           transition={{ duration: 1, type: 'spring', stiffness: 100 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="text-shadow-blue">Duration + Format</span>
           </h2>
-          <p className="text-xl text-white mt-4">
-            This course is a 6-week rollercoaster ride! Expect weekly lessons, fun quizzes, and interactive sessions.
+          <p className="text-xl text-white mb-6">
+            This is a 6-week course that will take you on an exciting journey to mastery. Expect:
           </p>
-        </motion.div>
-        <div className="border-r border-white h-full mx-4 hidden md:block"></div>
-        <motion.div
-          className="w-full md:w-1/2 relative"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.8 }}
-          transition={{ duration: 1, type: 'spring', stiffness: 100 }}
-        >
-          <Image
-            className="w-full h-auto rounded-lg shadow-lg"
-            src="/img.jpg" // Replace with your image
-            alt="Duration + Format"
-            width={400}
-            height={300}
-          />
+          <ul className="list-inside list-disc text-xl text-white space-y-4">
+            <li>Weekly interactive lessons</li>
+            <li>Quizzes and assignments to reinforce your learning</li>
+            <li>Live sessions to discuss strategies and insights</li>
+          </ul>
         </motion.div>
       </section>
 
       {/* Introduction Section */}
-      <section className="relative flex flex-col md:flex-row items-center justify-between bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
+      <section className="relative flex flex-col items-center justify-center bg-black bg-opacity-80 p-8 rounded-lg shadow-lg">
         <motion.div
-          className="w-full md:w-1/2 text-center md:text-left pr-4"
-          initial={{ opacity: 0, x: -100 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          className="text-center"
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.8 }}
           transition={{ duration: 1, type: 'spring', stiffness: 100 }}
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             <span className="text-shadow-blue">Introduction</span>
           </h2>
-          <p className="text-xl text-white mt-4">
-            Get ready to dive into the world of Forex trading, where you’ll learn the best strategies to conquer the market.
+          <p className="text-xl text-white mb-6">
+            Ready to dive into the world of Forex? Our course is your perfect starting point. Learn proven trading strategies, risk management, and psychology that will help you succeed in the global markets.
           </p>
-        </motion.div>
-        <div className="border-r border-white h-full mx-4 hidden md:block"></div>
-        <motion.div
-          className="w-full md:w-1/2 relative"
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: false, amount: 0.8 }}
-          transition={{ duration: 1, type: 'spring', stiffness: 100 }}
-        >
-          <Image
-            className="w-full h-auto rounded-lg shadow-lg"
-            src="/img.jpg" // Replace with your image
-            alt="Introduction"
-            width={400}
-            height={300}
-          />
+          <p className="text-lg text-white">
+            Get equipped with the tools and mindset of a professional trader and start your journey towards financial freedom today!
+          </p>
         </motion.div>
       </section>
     </div>
