@@ -2,96 +2,75 @@
 import { motion } from 'framer-motion';
 
 const WhatYoullLearnSection = () => {
+  const sections = [
+    {
+      title: 'Forex Basics',
+      description:
+        'Learn the fundamentals of Forex trading, including currency pairs, pips, and spreads.',
+    },
+    {
+      title: 'Technical Analysis',
+      description:
+        'Understand key indicators, chart patterns, and how to interpret market data for successful trades.',
+    },
+    {
+      title: 'Risk Management',
+      description:
+        'Learn how to manage risk, set stop losses, and use proper trade size to protect your capital.',
+    },
+    {
+      title: 'Trade Psychology',
+      description:
+        'Master the mental aspects of trading, including discipline, emotions, and mindset.',
+    },
+    {
+      title: 'Advanced Strategies',
+      description:
+        'Dive into advanced trading strategies to refine your skills and improve your profitability.',
+    },
+    {
+      title: 'Live Trading Sessions',
+      description:
+        'Participate in live trading sessions to gain real-time experience with expert guidance.',
+    },
+  ];
+
   return (
-    <section className="bg-black p-8 sm:p-6 lg:p-8 rounded-lg shadow-lg mt-32 space-y-8">
+    <section className="bg-black p-8 sm:p-10 lg:p-12 rounded-xl shadow-lg mt-32 space-y-8">
       <motion.h2
-        className="text-3xl sm:text-4xl font-bold text-center text-shadow-blue text-white"
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: false, amount: 0.8 }}
-        transition={{ duration: 1, type: 'spring', stiffness: 100 }}
+        className="text-3xl sm:text-4xl font-bold text-center blue-shadow-text text-shadow-blue-text"
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: 'easeOut' }}
       >
         What You&apos;ll Learn
       </motion.h2>
 
       <motion.div
-        className="flex flex-wrap justify-between gap-6"
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: false, amount: 0.8 }}
-        transition={{ duration: 1, type: 'spring', stiffness: 100 }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={{
+          hidden: { opacity: 0, scale: 0.95 },
+          visible: { opacity: 1, scale: 1 },
+        }}
+        transition={{ duration: 0.6, staggerChildren: 0.2 }}
       >
-        <motion.div
-          className="bg-black p-6 rounded-lg shadow-lg flex-1 min-w-[250px]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4 }}
-        >
-          <h3 className="text-xl sm:text-2xl font-semibold text-white text-shadow-blue">✅ Forex Basics</h3>
-          <p className="mt-2 text-sm sm:text-base text-white">
-            Learn the fundamentals of Forex trading, including currency pairs, pips, and spreads.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="bg-black p-6 rounded-lg shadow-lg flex-1 min-w-[250px]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6 }}
-        >
-          <h3 className="text-xl sm:text-2xl font-semibold text-white text-shadow-blue">✅ Technical Analysis</h3>
-          <p className="mt-2 text-sm sm:text-base text-white">
-            Understand key indicators, chart patterns, and how to interpret market data for successful trades.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="bg-black p-6 rounded-lg shadow-lg flex-1 min-w-[250px]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          <h3 className="text-xl sm:text-2xl font-semibold text-white text-shadow-blue">✅ Risk Management</h3>
-          <p className="mt-2 text-sm sm:text-base text-white">
-            Learn how to manage risk, set stop losses, and use proper trade size to protect your capital.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="bg-black p-6 rounded-lg shadow-lg flex-1 min-w-[250px]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-        >
-          <h3 className="text-xl sm:text-2xl font-semibold text-white text-shadow-blue">✅ Trade Psychology</h3>
-          <p className="mt-2 text-sm sm:text-base text-white">
-            Master the mental aspects of trading, including discipline, emotions, and mindset.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="bg-black p-6 rounded-lg shadow-lg flex-1 min-w-[250px]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
-        >
-          <h3 className="text-xl sm:text-2xl font-semibold text-white text-shadow-blue">✅ Advanced Strategies</h3>
-          <p className="mt-2 text-sm sm:text-base text-white">
-            Dive into advanced trading strategies to refine your skills and improve your profitability.
-          </p>
-        </motion.div>
-
-        <motion.div
-          className="bg-black p-6 rounded-lg shadow-lg flex-1 min-w-[250px]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.4 }}
-        >
-          <h3 className="text-xl sm:text-2xl font-semibold text-white text-shadow-blue">✅ Live Trading Sessions</h3>
-          <p className="mt-2 text-sm sm:text-base text-white">
-            Participate in live trading sessions to gain real-time experience with expert guidance.
-          </p>
-        </motion.div>
+        {sections.map((section, index) => (
+          <motion.div
+            key={index}
+            className="black border border-shadow-blue-text p-6 shadow-md hover:shadow-blue-text transition-shadow duration-300"
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0 },
+            }}
+          >
+            <h3 className="text-xl font-semibold text-white mb-2">{section.title}</h3>
+            <p className="text-sm text-gray-300">{section.description}</p>
+          </motion.div>
+        ))}
       </motion.div>
     </section>
   );
