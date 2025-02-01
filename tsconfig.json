@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/react-bits/blur-text.jsx", "app/components/react-bits/truefocus.jsx", "app/components/react-bits/decrypted.jsx"],
   "exclude": ["node_modules"]
 }
