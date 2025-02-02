@@ -1,11 +1,11 @@
-import Content from "./components/Content";
-import CTA from "./components/CTA";
+import  { CTASection }  from "./components/CTA";
 import WhyThisIsDifferentSection from "./components/Different";
-import FAQSection from "./components/FAQSection";
+import { SpecialOfferSection } from "./components/FinalPush";
 import Hero from "./components/Hero";
+import ScarcityUrgency from "./components/SacrcityUrgency";
+import { OfferSection } from "./components/TheOffer";
 import TheSolution from "./components/TheSolution";
 import TwistTheKnife from "./components/TwistTheKnife";
-import WhatYoullLearnSection from "./components/WhatYoullLearn";
 
 export default function Home() {
   return (
@@ -13,11 +13,13 @@ export default function Home() {
       <Hero />
       <TwistTheKnife />
       <TheSolution />
+      <OfferSection />
+      <CTASection />
+      <ScarcityUrgency />
       <WhyThisIsDifferentSection />
-      <WhatYoullLearnSection />
-      <Content />
-      <FAQSection />
-      <CTA />
+      <SpecialOfferSection />
+      
+      
     </>
   );
 }

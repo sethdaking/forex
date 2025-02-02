@@ -22,6 +22,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/react-bits/blur-text.jsx", "app/components/react-bits/truefocus.jsx", "app/components/react-bits/decrypted.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/components/react-bits/blur-text.jsx", "app/components/react-bits/truefocus.jsx", "app/components/react-bits/decrypted.jsx", "app/components/react-bits/falling.tsx"],
   "exclude": ["node_modules"]
 }

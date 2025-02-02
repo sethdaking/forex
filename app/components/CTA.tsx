@@ -1,43 +1,60 @@
-'use client';
-import { motion } from 'framer-motion';
+'use client'
+import { motion } from 'framer-motion'
 
-const FinalCTA = () => {
+export function CTASection() {
   return (
-    <section className="flex flex-col items-center justify-center bg-black p-16 rounded-lg shadow-lg mt-32">
-      <motion.div
-        className="text-center"
-        initial={{ opacity: 0, y: 100, scale: 0.9 }}
-        whileInView={{ opacity: 1, y: 0, scale: 1 }}
-        viewport={{ once: true, amount: 0.8 }}
-        transition={{ duration: 1, type: 'spring', stiffness: 80 }}
+    <motion.div
+      className="bg-black  rounded-3xl text-white p-12 shadow-lg text-center max-w-3xl mx-auto mt-20"
+      style={{ boxShadow: "0px 0px 25px rgba(15, 10, 222, 0.8)" }} // Glowing effect
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      <motion.h2
+        className="text-4xl font-extrabold uppercase mb-6 text-red-500"
+        style={{ textShadow: "0px 0px 15px rgba(255, 0, 0, 1)" }} // Glowing red title
+        initial={{ scale: 0.8, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <motion.h2
-          className="text-4xl font-bold"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
-        >
-          Ready to Transform Your Future?
-        </motion.h2>
-        <motion.p
-          className="text-xl text-white mt-4 text-blue-shadow-text"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
-        >
-          Don’t wait—start your journey to financial freedom today! Join our Forex trading course and unlock the skills to succeed.
-        </motion.p>
-        <motion.a
-          href="#signup" // Replace with your sign-up page or action
-          className="mt-8 inline-block bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-full text-2xl shadow-blue-text hover:bg-gradient-to-l hover:from-blue-600 hover:to-purple-600 transition-transform duration-500 transform hover:scale-110"
-          whileHover={{ scale: 1.1, rotate: 5 }}
-          whileTap={{ scale: 0.95, rotate: -5 }}
-        >
-          Enroll Now
-        </motion.a>
-      </motion.div>
-    </section>
-  );
-};
+        🚀 The Window is Closing—Claim Your Spot! 🚀
+      </motion.h2>
 
-export default FinalCTA;
+      <motion.p
+        className="text-3xl font-bold mb-6 leading-relaxed"
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        👉 Are you ready to <span className="text-red-500 font-extrabold">stop making excuses</span> and <span className="text-green-400">start making money</span>?
+      </motion.p>
+
+      <motion.p
+        className="text-2xl font-semibold mb-6"
+        initial={{ x: 100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        viewport={{ once: true }}
+      >
+        Click the button below to grab your spot <span className="text-yellow-400 font-bold">before someone else does.</span>
+      </motion.p>
+
+      <motion.button
+        className="bg-yellow-400 text-black font-extrabold text-2xl px-10 py-5 rounded-xl shadow-lg uppercase tracking-wider mt-4"
+        style={{ boxShadow: "0px 0px 20px rgba(255, 215, 0, 0.8)" }}
+        initial={{ scale: 0.9 }}
+        whileHover={{
+          scale: 1.1,
+          textShadow: "0px 0px 20px rgba(255, 215, 0, 1)",
+          boxShadow: "0px 0px 30px rgba(255, 215, 0, 1)",
+        }}
+        whileTap={{ scale: 0.95 }}
+        transition={{ duration: 0.2 }}
+      >
+        JOIN NOW—LIMITED TO 500 SPOTS
+      </motion.button>
+    </motion.div>
+  )
+}
