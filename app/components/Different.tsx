@@ -10,16 +10,6 @@ const WhyThisIsDifferentSection = () => {
       animate={{ opacity: 1 }}
       transition={{ duration: 1, type: 'spring', bounce: 0.4 }}
     >
-      {/* Title Animation */}
-      <motion.h2
-        className="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-blue-500"
-        initial={{ opacity: 0, x: -50 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8 }}
-      >
-        Why This Is Different
-      </motion.h2>
-
       {/* Content */}
       <motion.p
         className="text-2xl mt-6"

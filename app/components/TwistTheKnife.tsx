@@ -4,15 +4,15 @@ import TrueFocus from "./react-bits/truefocus";
 
 const TwistTheKnife = () => {
   return (
-    <div className="w-full max-w-2xl mx-auto text-center p-6 bg-black text-white rounded-2xl shadow-lg">
+    <div className="w-full max-w-3xl mx-auto text-center p-6 bg-black text-white rounded-2xl shadow-lg">
       {/* Heading */}
       <TrueFocus 
-        sentence="The Harsh Reality"
+        sentence="DOES THIS SOUND FAMILIAR?"
         manualMode={false}
         blurAmount={5}
         borderColor="red"
         animationDuration={2}
-        pauseBetweenAnimations={1}
+        pauseBetweenAnimations={0.6}
       />
 
       {/* Problem Statements */}

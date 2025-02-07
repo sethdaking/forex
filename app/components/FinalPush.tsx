@@ -17,7 +17,7 @@ export function SpecialOfferSection() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true }}
       >
-        🎯 THIS IS YOUR SHOT TO BREAK FREE 🎯
+        THIS IS YOUR SHOT TO BREAK FREE 
       </motion.h2>
 
       <p className="text-2xl mb-6">
@@ -35,9 +35,9 @@ export function SpecialOfferSection() {
       <p className="text-2xl mb-6">
         This is your chance to learn from the <motion.span
           className="font-bold"
-          style={{ color: '#3B82F6' }} // Apply blue color
+          style={{ color: '#3B82F6' }}
           initial={{ textShadow: "0px 0px 0px rgba(59, 130, 246, 0)" }}
-          animate={{ textShadow: "0px 0px 20px rgba(59, 130, 246, 0.7)" }} // Glowing blue effect
+          animate={{ textShadow: "0px 0px 20px rgba(59, 130, 246, 0.7)" }}
           transition={{ duration: 1.2, repeat: Infinity, repeatType: "reverse" }}
         >
           FxDream team
@@ -74,6 +74,25 @@ export function SpecialOfferSection() {
         >
           Act now
         </motion.span>, or miss out forever.
+      </motion.p>
+
+      <motion.p
+        className="text-xl mt-6 italic"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, delay: 1.5 }}
+        viewport={{ once: true }}
+      >
+        Or, you know... <motion.a 
+          href="https://www.netflix.com" 
+          target="_blank"
+          className="underline font-semibold"
+          initial={{ textShadow: "0px 0px 0px rgba(255, 0, 0, 0)" }}
+          animate={{ textShadow: "0px 0px 15px rgba(255, 0, 0, 0.7)" }}
+          transition={{ duration: 1, repeat: Infinity, repeatType: "reverse" }}
+        >
+          go binge Netflix
+        </motion.a> and stay exactly where you are.
       </motion.p>
     </motion.div>
   )
